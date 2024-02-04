@@ -1,0 +1,104 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  background-color: rgb(54, 54, 54);
+}
+h1 {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  color: white;
+  font-size: 4rem;
+  white-space: nowrap;
+}
+button {
+  position: absolute;
+  left: 40%;
+  top: 70%;
+  border: white solid 0.2rem;
+  font-size: 1.5rem;
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.split.left button {
+  background-color: rgba(208, 208, 223, 0.5);
+}
+.split.right button {
+  background-color: rgba(204, 171, 171, 0.5);
+}
+.split {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+.split.left {
+  background-image: url("https://images.unsplash.com/photo-1706548195448-a6d8969cae6a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMTd8fHxlbnwwfHx8fHw%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0;
+  max-height: 100%;
+}
+.split.left::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(208, 208, 223, 0.3);
+}
+.split.right {
+  background: url("https://images.unsplash.com/photo-1706816997344-3b9bd26fd07a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMjB8fHxlbnwwfHx8fHw%3D");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  max-height: 100%;
+}
+.split.right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  background-color: rgba(204, 171, 171, 0.3);
+}
+.split.left button:hover {
+  background-color: blue;
+  border: none;
+}
+.split.right button:hover {
+  background-color: green;
+  border: none;
+}
+.hover-left .left {
+  width: 75%;
+}
+.hover-left .right {
+  width: 25%;
+}
+.hover-right .left {
+  width: 25%;
+}
+.hover-right .right {
+  width: 75%;
+}
+.split.left,
+.split.right {
+  transition: all 1000ms ease-in;
+}
+@media (max-width: 700px) {
+  h1 {
+    font-size: 3rem;
+  }
+  button {
+    padding: 6px 9px;
+  }
+}
